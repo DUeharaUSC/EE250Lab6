@@ -34,7 +34,7 @@ while True:
         threshold = int(round(pot_val * MAX_US / 1023.0))
 
         # Format LCD text according to threshold
-        obj_pres = "OBJ PRES" if distance < threshold else "       "
+        obj_pres = "OBJ PRES" if distance < threshold else "        "
         top_line = "{:3d} {}".format(threshold, obj_pres).strip()
         bottom_line = "{:4d}cm".format(distance)
 
