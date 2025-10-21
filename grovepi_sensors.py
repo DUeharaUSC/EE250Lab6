@@ -37,10 +37,16 @@ while True:
         if distance < threshold:
             # Format: "XXX OBJ PRES" (threshold + space + OBJ PRES)
             top_line = "{:3d} OBJ PRES".format(threshold)
+            
+            # Set background color to RED when object is present
+            setRGB(255, 0, 0)  # Red
         else:
             # Format: "XXX           " (threshold + 11 spaces to clear the line)
             top_line = "{:3d}           ".format(threshold)
         
+            # Set background color to GREEN when no object
+            setRGB(0, 255, 0)  # Green
+
         bottom_line = "{:4d}cm".format(distance)
 
         # Use setText_norefresh as required
