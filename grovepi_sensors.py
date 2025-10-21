@@ -38,7 +38,7 @@ while True:
         top_line = "{:3d} {}".format(threshold, obj_pres).strip()
         bottom_line = "{:4d}cm".format(distance)
 
-        setText("{}\n{}".format(top_line, bottom_line))
+        setText_norefresh()("{}\n{}".format(top_line, bottom_line))
 
         # small delay to avoid overwhelming sensor/LCD
         time.sleep(0.18)
